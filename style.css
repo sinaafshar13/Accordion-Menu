@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 30px;
+}
+.accordion {
+  width: 100%;
+  background-color: #ddd;
+  padding: 18px;
+  font-weight: bold;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.active,
+.accordion:hover {
+  background-color: lightgray;
+}
+.accordion::after {
+  content: "\00276F";
+  transform: rotate(90deg);
+  color: #777;
+  float: right;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.active::after {
+  content: "\00276F";
+  transform: rotate(270deg);
+}
+.panel {
+  padding: 0px 18px;
+  max-height: 0px;
+  overflow: hidden;
+  background-color: rgb(170, 153, 120);
+  transition: max-height 0.2s ease-out;
+}
+p {
+  padding: 20px 0;
+}
