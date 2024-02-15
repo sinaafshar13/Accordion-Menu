@@ -12,3 +12,16 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
+var acc2 = document.querySelector(".delegation");
+
+acc2.addEventListener('click' , (event)=>{
+  let target = event.target;
+  let panel2 = target.nextElementSibling;
+  target.classList.toggle("active");
+  if (panel2.style.maxHeight) {
+    panel2.style.maxHeight = null;
+  } else {
+    panel2.style.maxHeight = panel2.scrollHeight + "px";
+  } 
+})
+
